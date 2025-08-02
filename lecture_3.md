@@ -15,16 +15,18 @@
 
 1.  Train on a large corpus of text data(raw text)
 
-- Raw text = regular text without any labeling information
+    - Raw text = regular text without any labeling information
 
-2. first training stage of LLM is also called `pretraining`
+2.  first training stage of LLM is also called `pretraining`
 
-- creating an initial pretrained LLM(base/foundational model)
-- eg: GPT-3 model is a pretrained model which is capable of text completetion
+    - creating an initial pretrained LLM(base/foundational model)
+    - eg: GPT-3 model is a pretrained model which is capable of text completetion
 
-3. After obtaining the pretrained LLM, we can further train the LLM on labelled data
+3.  After obtaining the pretrained LLM, we can further train the LLM on labelled data
 
-4. Ther are 2 popular categories of finetuning
+4.  Ther are 2 popular categories of finetuning
 
-- instruction finetuning: labeled dataset consist of instrution-answer pairs. eg: text translation, airline customer support
-- fintuning for classification tasks: labeled dataset consist of text and associated lables. eg: emails -> spam vs non-spam
+    - `instruction finetuning`: labeled dataset consist of instrution-answer pairs. eg: text translation, airline customer support
+    - `fintuning for classification tasks`: labeled dataset consist of text and associated lables. eg: emails -> spam vs non-spam
+
+5.  After finetuning deployment

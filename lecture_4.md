@@ -10,7 +10,7 @@
 
 1. **Input text**:The input text to be translated
 
-2. **Preprocessing steps**:Input text is the preprocessed, converted into tokens in a process called `tokenization`, img below for the the `encoder`.
+2. **Preprocessing steps**: Input text is the preprocessed, converted into tokens in a process called `tokenization`, img below for the the `encoder`.
    ![](images/tokenization.png)
 
    - Tokenization is simply breaking down each words in the `input text` into their simplest form.
@@ -20,7 +20,7 @@
 
    - The encoder creates `vector embeddings`. **the goal is to capture or represent the semantic meaning between the words in the input text and then store them**. that is is the process of `vector embeddings`
      ![](images/vector_embedding.png)
-   - Again the main purpose of the `encoder` is to take in the `preprocessed text(tokens)` and then conver them to `vector embeddings` in `n-dimensional space` such that each word in the input makes sense in that dimensional state. as shown in the image above... such that words which are closer to each other are in the located around in the same vector space.
+   - Again the main purpose of the `encoder` is to take in the `preprocessed text(tokens)` and then convert them to `vector embeddings` in `n-dimensional space` such that each word in the input makes sense in that dimensional space. as shown in the image above... such that words which are closer to each other are in the located around in the same vector space.
    - visualization of vector embedding(NB: embedding models are trained for this)
      ![](images/embeddings.png)
      ![](images/embeddings2.png)
@@ -37,11 +37,28 @@
 6. So the `partial output` is passed as `input text` again to be preprocessed(converted into tokens for it to be convert into embeddings again). here is the `proprocessing steps` once again
 
    - Essentially, the `input text`(which is the `partial predicted output`) is preprocessed and prepared for the decoder.
-   - **NB: along with this `partial output text` generation, the decoder also receives the vector embeddings. which makes sense cause this is how it is going to tell which words are closer to each other in the `n-dimensional space`. so it kinda this process happens simultaneously. model predicts, get tokenized, comes to the vector space and so on...**
+   - 🔁 NB: What Happens During Partial Output Generation
+
+   * As the model **generates each word** (i.e., partial output), that word is:
+
+     1. **Tokenized** (converted into token IDs),
+     2. **Embedded** (converted into vectors using the embedding layer),
+     3. **Fed back** into the decoder as input for the next prediction.
+
+   * ✅ At every step, the decoder **doesn't just rely on the tokens**. It also uses:
+
+     - The **embedding vectors** (to understand relationships between words in n-dimensional space),
+     - The **context from previous steps** (via self-attention).
+
+   * This process happens **iteratively and simultaneously**:
+
+     > Predict → Tokenize → Embed → Decode → Predict next → repeat...
+
+   * That's how the model gradually builds the full output—**one token at a time**, always guided by both **token meaning (via embeddings)** and **context (via attention)**.
 
 7. **Decoder**: generates translated text one word at a time.
 
-   - so now here, the text are being processed are are now in the vector space... the `decoder` has to now predict the next word from the `vector space` from all the dataset that was placed in the vector space.
+   - so now here, the text are being processed are now in the vector space... the `decoder` has to now predict the next word from the `vector space` from all the dataset that was placed in the vector space.
 
 8. **Output layers**: Complete the output translations say outputs the translation. eg: `Das est ein Beispiel`. thus, the next word(or probably the last word) has been predicted and added.
 
