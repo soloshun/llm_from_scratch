@@ -41,7 +41,7 @@
 
 ### **How is the BPE algorithm used for LLMs?**
 
-- `BPE` ensures that mose common words in the vocabulary is represented as a single token, while rare words are broken down into two or more subwords tokens.
+- `BPE` ensures that most common words in the vocabulary is represented as a single token, while rare words are broken down into two or more subwords tokens.
 - example: let consider a dataset or words:
 
   `{"old":7, "older":3, "finest":9, "lowest":4}`
