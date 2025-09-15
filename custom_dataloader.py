@@ -56,7 +56,6 @@ def create_dataloader_v1(
         shuffle=shuffle,
         drop_last=drop_last,
         num_workers=num_workers
-        
     )
     
     return dataloader

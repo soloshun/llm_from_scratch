@@ -10,7 +10,7 @@
 
 - extract input blocks as subsamples that serve as input to the LLM
 - The LLM prediction task during training is to predict the next word that follow the input block
-- During training, we mask out all words that are past the target.
+- During training, we mask out all words that are part of the target.
 
 **Terminologies:**
 
@@ -21,7 +21,7 @@
 
 ### **CREATING A DATA LOADER**
 
-> We will implement a data loader that fetches input-output targe pairs using a sliding window approach
+> We will implement a data loader that fetches input-output target pairs using a sliding window approach
 > ![](images/data_loader_l9.png)
 
 - To implement efficient dataloaders, we collect `inputs` in a `tensor x`, where each row `represents one input context`. The second `tensor y` contains `the corresponding prediction targets(next word)`, which are created by shifting the input by one position
@@ -29,5 +29,5 @@
 
 #### **MEANING OF STRIDE**
 
-**NB: Sometimes the `context size` is make to be the same as the `stride size` to `curtail overfitting of the langurage model`**
+**NB: Sometimes the `context size` is made to be the same as the `stride size` to `curtail overfitting of the langurage model`**
 ![](images/STRIDE_L9.png)

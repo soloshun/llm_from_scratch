@@ -64,8 +64,6 @@ Adding positional encoding allows the LLM to:
 - Positional embeddings are **learnable parameters**.
 - They are **optimized along with token embeddings** during training.
 
-Excellent — this continuation is moving smoothly from theory to implementation. Here's your full **cleaned-up and well-organized** version for reference, interviews, or code understanding:
-
 ## 🔧 **Implementing Positional Embeddings (Hands-on)**
 
 We walk through how **token embeddings** and **positional embeddings** are combined to create **input embeddings** in a real model pipeline.

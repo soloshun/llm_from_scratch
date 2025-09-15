@@ -15,7 +15,7 @@
   - every character in the text/sentence is considered a token
   - eg: `My hobby is playing cricket` -> `['M', 'y', 'h', 'o', 'o',...]`
   - this leads to very small vocabulary, which solves the `OOV` problem. Every language has a fixed number of characters (english ~ 256)
-  - **Problem**: `(1).`the meaning associated with the words is completely lost. Also, `(2).`the tokenized sequence is much longer thatn the initial raw text.
+  - **Problem**: `(1).`the meaning associated with the words is completely lost. Also, `(2).`the tokenized sequence is much longer than the initial raw text.
 
 - **Sub-word based tokenizers:**
 
