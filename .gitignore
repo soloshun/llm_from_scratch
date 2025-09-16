@@ -1,3 +1,6 @@
+# ignore all files in the llm-from-scratch directory
+llm-from-scratch/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
