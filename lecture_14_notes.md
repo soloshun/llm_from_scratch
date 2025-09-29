@@ -24,7 +24,7 @@ so our task to it convert the embeddings vector of a `query` into a context vect
 1. First step of implementing self-attention is to compute the intermediate values `w`, also referred to as `attention scores`
    ![](images/L14_s1.png)
 
-2. The intermediate `attention scores` are calculated between the `query token`(dot product between query and every other input token) an each `input token` us the `dot product`.
+2. The intermediate `attention scores` are calculated between the `query token`(dot product between query and every other input token) and each `input token` us the `dot product`.
 
    - dot products quantifies how much two vectors are aligned
    - In the context of self attention mechanisms, **dot products determines the extent to which elements of a sequence attend to one another**, the higher the dot product, the higher the `similarity` and `attention score`

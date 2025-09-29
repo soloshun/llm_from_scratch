@@ -90,7 +90,7 @@ import numpy as np
 
 # Sample words and token IDs
 words = ["cat", "kitten", "dog", "puppy", "car"]
-  token_ids = [4512, 2983, 9821, 3049, 1832]
+token_ids = [4512, 2983, 9821, 3049, 1832]
 
 # Create mock embedding vectors in 2D for visualization
 embedding_vectors = {
@@ -251,7 +251,7 @@ This is the **embedding matrix** used in LLMs like GPT-2:
      > While they are distinct, syntax and semantics are interconnected. A sentence needs to be syntactically correct to be understood semantically, but a syntactically correct sentence may not always be semantically meaningful. Semantics is also influenced by contextual cues, such as the surrounding words or the situation in which the sentence is used, [according to Study.com](https://study.com/academy/lesson/using-syntactic-semantic-context-clues-to-determine-meaning.html).
 
    - The model can now use these vectors to _"understand"_ and _predict_ tokens more effectively
-     > **The `embedding layer` is a lookup operation that retrieves rows from a the embedding later weight using a token ID** > ![](images/L10_vec_s8.png) > **NB: this `embedding layer` is also the same as `neural network linear layer` but the embedi dng layer is used because it is computationally efficient and it scales up when building these large language models, since `torch.nn linear layers` has many uncessary multiplication with zero**
+     > **The `embedding layer` is a lookup operation that retrieves rows from a the embedding later weight using a token ID** > ![](images/L10_vec_s8.png) > **NB: this `embedding layer` is also the same as `neural network linear layer` but the embedding layer is used because it is computationally efficient and it scales up when building these large language models, since `torch.nn linear layers` has many uncessary multiplication with zero**
 
 ---
 
