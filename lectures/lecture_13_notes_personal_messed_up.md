@@ -11,7 +11,7 @@
 - casual attention
 - multi-head attention(gpt uses this)
 
-![](images/L13_types_att.png)
+![](../images/L13_types_att.png)
 
 ### Simplied Self-Attention
 
@@ -34,17 +34,17 @@
 - What is the problem with architectures without the attention mechanism which came before LLMs?
 
   - **let's consider a language translation model**
-    ![](images/L13_s1.png)
+    ![](../images/L13_s1.png)
 
-    > **Word by word translation does not work!** > ![](images/L13_s2.png) > ![](images/L13_s3.png) > **The translation process requires `contexual understanding` and `grammer alignment`**
+    > **Word by word translation does not work!** > ![](../images/L13_s2.png) > ![](../images/L13_s3.png) > **The translation process requires `contexual understanding` and `grammer alignment`**
 
   - To address this issue that we cannot translate text word by word, it is common to use a neural network with two submodules:
   - **Encoder:** Reads and process text
   - **Decoder:** Translate text
 
     [get full animation here and article here](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
-    ![](images/L13_s4.png)
-    [watch video](images/L13_enc_dec1.mp4)
+    ![](../images/L13_s4.png)
+    [watch video](../images/L13_enc_dec1.mp4)
 
     > Under the hood, the model is composed of an `encoder` and a `decoder`. <br> <br> The `encoder` processes each item in the input sequence, it compiles the information it captures into a vector (called the `context`). After processing the entire input sequence, the `encoder` sends the `context` over to the `decoder`, which begins producing the output sequence item by item.
 
@@ -52,7 +52,7 @@
   - RNN: output from previous step is fed as input to the current text
   - rnn takes the input and hidden state vector this hidden state vector gets updated at each iteration of every word
   - Here's how the encoder-decoder RNN works:
-    ![](images/L13_s5.png)
+    ![](../images/L13_s5.png)
 
     - Input text
     - Encoder processes input sequencially
@@ -79,7 +79,7 @@
 - RNNs works fine for translating short sentences, but don't work for long texts as they don't have direct access to previous words in the input
 - One major shortcoming in this approach is that: **RNN must remember the entire encoded input in a single hidden state before passing it to the decoder**... _(ohh my thought here... somehing clicked) ooohhh that is why the embedding and positional embedding makes sense here case with the vector and positional embeddings which helps us understand the semantic meaning of words in vector spaces and wher each word is important here or not or something. the attention using these will actually be able some what decrypt how they are close in vector space or something... (i actually do not know my that is what i think... all is coming together here)_
 - In 2014, researchers developed the so called **"Bahdanau attention mechanism for RNNs": `modifies` the `endcoder-decoder RNN` such that `decoder can selectively access different part of the input sequence at each decoding step`** [NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE paper](https://arxiv.org/abs/1409.0473)
-  ![](images/L13_s6.png)
+  ![](../images/L13_s6.png)
 
   - using an attention mechanism, the text generating decoder part of the network can access all input tokens selectively.
   - **this means that some input tokens are more important than other for generating a given output token.**
@@ -94,14 +94,14 @@
   - `dynamic focus`(for every decoding step we can selectively choose which input to focus and how much attention we give to it) on different parts of the inputs sequence allows the model to learn long range dependencies more effectively
 
     > Note that the model isn’t just mindlessly aligning the first word at the output with the first word from the input. It actually learned from the training phase how to align words in that language pair (French and English in our example). An example for how precise this mechanism can be comes from the attention papers listed above:
-    > ![](images/L13_s7.png)
+    > ![](../images/L13_s7.png)
 
     > history of language models. we only hear of transformers today but, this work has actually been under research for the past 43 years
-    > ![](images/L13_s7_his.png)
+    > ![](../images/L13_s7_his.png)
 
 - Self attention is a mechanism that allows each position of the input sequence to attend to all positions in the same sequence when computing the representation of a sequence.
 - Self attention is a key component of the contemporary LLMs based on the transformer architecture, such as GPT series
-  ![](images/L13_s8.png)
+  ![](../images/L13_s8.png)
 
 ## Attending to different parts of the input with self attention
 

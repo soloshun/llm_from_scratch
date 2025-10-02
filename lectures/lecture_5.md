@@ -5,12 +5,12 @@
 - **Zero shot**: Ability to generalize to completely unseen task without any prior specific examples. Model has no support.
 - **Few shot**: learning from a minimum number of examples which the user provides as input. Model sees a few examples of the task.
 - egs of zero and few shot learning
-  ![](images/zero_few_shots.png)
+  ![](../images/zero_few_shots.png)
 
 ### 2. UTILIZING LARGE DATASET
 
 - GPT-3 dataset training
-  ![](images/gpt3_dataset.png)
+  ![](../images/gpt3_dataset.png)
 - **A token is a unit of text which the model reads.**
 - the total pre-training cost for GPT-3 ~4.6 million dollars
 
@@ -22,7 +22,7 @@
 - GPT models are simply trained on `next-word` prediction tasks.
   - eg: The lion roams in the `jungle`(next word)
 - with this training, they can do a wide range of other task like translation, spelling correction etc!
-  ![](images/gpt_training.png)
+  ![](../images/gpt_training.png)
 - Next word prediction: Self-supervised learning -> self labeling
 - we don't collect labels for the training data, but use the structure of the data itself, thus, **next word in the sentence is used as the label**. that is why these model are called `auto regressive models`
 
@@ -37,7 +37,7 @@
 - compared to the original transformer architecture, GPT architecture is simpler
 - In GPT architecture, there is `no encoder`. we just have `the decoder`
 - Original transformer had `6 encoder-decoder` blocks while `GPT-3 had 96 transformer layers` with `175 billion parameters`
-  ![](images/gpt_architecture1.png)
-  ![](images/gpt_architecture2.png)
+  ![](../images/gpt_architecture1.png)
+  ![](../images/gpt_architecture2.png)
 - Although trained only for next word predictions, GPT model can perform other tasks like language translations. this is call `emergent behavior`
   - **emergent behavior is the ability of a model to perform task that the model wasn't explicitly trained to perform**

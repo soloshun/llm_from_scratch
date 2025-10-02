@@ -1,6 +1,6 @@
 # **Token/Vector Embeddings**
 
-![](images/token_embed_dia.png)
+![](../images/token_embed_dia.png)
 
 So in this lecture we're going to dive into step 3, creating `token embedding` or what some people call it `vectore embeddings`... _the previous steps(1 & 2) you'll find them in the lecture 7, 8 and 9._
 
@@ -13,8 +13,8 @@ this note is going to be in 6 modules
 ## **Conceptual understanding of why tokens embeddings are needed?**
 
 slides images
-![](images/L10_vec_s1.png)
-![](images/L10_vec_s2.png)
+![](../images/L10_vec_s1.png)
+![](../images/L10_vec_s2.png)
 
 ---
 
@@ -81,7 +81,7 @@ The **embedding layer** in a model transforms token IDs into dense vectors so th
 - **Token IDs** = symbolic labels → fast, unique, but meaningless alone
 - **Embeddings** = learned vectors → represent **semantic relationships**
 - This is why we don’t just feed token IDs directly into a neural network — the network first **embeds** them into vectors that make language **computable**.
-  ![](images/L10_vec_eg.png)
+  ![](../images/L10_vec_eg.png)
 
 ```python
 # Code for the image above
@@ -118,9 +118,9 @@ plt.show()
 
 ---
 
-![](images/L10_vec_s3.png)
-![](images/L10_vec_s4.png)
-![](images/L10_vec_s5.png)
+![](../images/L10_vec_s3.png)
+![](../images/L10_vec_s4.png)
+![](../images/L10_vec_s5.png)
 
 ## 🧠 Why Use Vector Embeddings Instead of Token IDs or One-Hot Vectors?
 
@@ -189,7 +189,7 @@ Each word (e.g., `"dog"`, `"cat"`, `"apple"`, `"banana"`) is represented as a **
 ### **NOW ALL THIS IS GREAT, NOW HOW DO WE MAKE IT SO THAT `DOG/PUPPY`, `CAT/KITTEN`... ARE IN THE SAME AREA IN THE VECTOR SPACE... LET DIVE INTO THAT**
 
 - So we train a neural network for this task
-  ![](images/L10_vec_s6.png)
+  ![](../images/L10_vec_s6.png)
 - Representing words as vectors, so that the semantic relationship is captured is what we call as `vector` or `token` embeddings
 
 ## **Small hands on demo: Playing with token embeddings**
@@ -201,7 +201,7 @@ Each word (e.g., `"dog"`, `"cat"`, `"apple"`, `"banana"`) is represented as a **
 
 ## **🧩 How Are Token Embeddings Created in LLMs?**
 
-![](images/L10_vec_s7.png)
+![](../images/L10_vec_s7.png)
 
 ### 📌 What the Diagram Shows
 
@@ -251,7 +251,7 @@ This is the **embedding matrix** used in LLMs like GPT-2:
      > While they are distinct, syntax and semantics are interconnected. A sentence needs to be syntactically correct to be understood semantically, but a syntactically correct sentence may not always be semantically meaningful. Semantics is also influenced by contextual cues, such as the surrounding words or the situation in which the sentence is used, [according to Study.com](https://study.com/academy/lesson/using-syntactic-semantic-context-clues-to-determine-meaning.html).
 
    - The model can now use these vectors to _"understand"_ and _predict_ tokens more effectively
-     > **The `embedding layer` is a lookup operation that retrieves rows from a the embedding later weight using a token ID** > ![](images/L10_vec_s8.png) > **NB: this `embedding layer` is also the same as `neural network linear layer` but the embedding layer is used because it is computationally efficient and it scales up when building these large language models, since `torch.nn linear layers` has many uncessary multiplication with zero**
+     > **The `embedding layer` is a lookup operation that retrieves rows from a the embedding later weight using a token ID** > ![](../images/L10_vec_s8.png) > **NB: this `embedding layer` is also the same as `neural network linear layer` but the embedding layer is used because it is computationally efficient and it scales up when building these large language models, since `torch.nn linear layers` has many uncessary multiplication with zero**
 
 ---
 

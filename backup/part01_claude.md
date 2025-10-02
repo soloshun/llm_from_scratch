@@ -123,7 +123,7 @@ Now let's understand the architecture that makes it all possible. The transforme
 
 ### **The Original Transformer: Encoder-Decoder Architecture**
 
-![Transformer Architecture](../images/transformer_archi.png)
+![Transformer Architecture](../../images/transformer_archi.png)
 
 **The Complete Flow:**
 
@@ -247,7 +247,7 @@ Now that you understand the theory, let's map out exactly what we're building to
 
 ### **Stage 1: Data Preparation & Core Architecture**
 
-![Stage 1 Overview](../images/stage1.png)
+![Stage 1 Overview](../../images/stage1.png)
 
 **What we'll implement:**
 
@@ -276,7 +276,7 @@ Now that you understand the theory, let's map out exactly what we're building to
 
 ### **Stage 2: Pretraining**
 
-![Stage 2 Overview](../images/stage2.png)
+![Stage 2 Overview](../../images/stage2.png)
 
 **What we'll implement:**
 

@@ -30,7 +30,7 @@ But there's a problem: token IDs like `40` and `367` are just arbitrary labels. 
 
 To solve this, we need to convert these IDs into a rich, numerical representation that captures meaning. This is the job of the **Embedding Layer**, the very first layer of our neural network.
 
-![](../../images/token_embed_dia.png)
+![](../../../images/token_embed_dia.png)
 
 In this part, we will build the two critical components of this layer:
 
@@ -68,7 +68,7 @@ This solves the arbitrary bias problem, but introduces two new, massive ones:
 
 Instead of a sparse, meaningless vector, we map each token ID to a **dense, lower-dimensional vector** filled with real numbers. This is called an **embedding**.
 
-![](../../images/L10_vec_s5.png)
+![](../../../images/L10_vec_s5.png)
 
 These vectors are not fixed; they are **learnable parameters**. During training, the model adjusts these vectors. The goal is to arrange them in a high-dimensional "semantic space" where:
 
@@ -89,7 +89,7 @@ In PyTorch, we implement this with `torch.nn.Embedding`. You can think of this l
 - **Rows**: The number of rows equals the `vocab_size` (e.g., 50,257 for GPT-2).
 - **Columns**: The number of columns is the `embedding_dim` (e.g., 768 for GPT-2). This is the size of the vector for each token.
 
-![](../../images/L10_vec_s7.png)
+![](../../../images/L10_vec_s7.png)
 
 When we pass a batch of token IDs to this layer, it simply performs a lookup, fetching the corresponding vector for each ID.
 
@@ -108,7 +108,7 @@ Consider these two sentences:
 
 Both sentences contain the exact same tokens, so their token embeddings would be identical. The model would have no way of knowing their fundamental meaning is different.
 
-![](../../images/L11_posi_enc.png)
+![](../../../images/L11_posi_enc.png)
 
 We need a way to inject the **order** of the tokens into our model.
 
@@ -125,7 +125,7 @@ For our GPT-style model, we use **Absolute Positional Embeddings**. This is anot
 
 The shape of this matrix is `[context_size, embedding_dim]`. The vector at row `0` represents the "first word" embedding, the vector at row `1` represents the "second word" embedding, and so on. These are also learned during training.
 
-![](../../images/L11_abs_enc.png)
+![](../../../images/L11_abs_enc.png)
 
 ---
 
@@ -137,16 +137,16 @@ The final input to our transformer model is the **sum** of the token embedding a
 
 Let's walk through the entire process with a concrete example, visualizing the tensor shapes.
 
-![](../../images/L11_img1.png)
+![](../../../images/L11_img1.png)
 
 1.  Our `DataLoader` gives us a batch of token IDs of shape **`[8, 4]`** (`batch_size`, `context_size`).
-    ![](../../images/L11_img2.png)
+    ![](../../../images/L11_img2.png)
 
 2.  The **token embedding layer** (`[vocab_size, 256]`) looks up these IDs, producing a tensor of shape **`[8, 4, 256]`**.
-    ![](../../images/L11_img3.png)
+    ![](../../../images/L11_img3.png)
 
 3.  We create a sequence of position IDs: `[0, 1, 2, 3]`. The **positional embedding layer** (`[4, 256]`) looks these up, producing a tensor of shape **`[4, 256]`**.
-    ![](../../images/L11_img4.png)
+    ![](../../../images/L11_img4.png)
 
 4.  We add the two. PyTorch uses **broadcasting** to automatically "stretch" or "repeat" the `[4, 256]` positional tensor across the batch dimension, effectively making it `[8, 4, 256]` so it can be added element-wise.
 

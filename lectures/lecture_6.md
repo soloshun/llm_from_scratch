@@ -1,16 +1,16 @@
 # Stages of building LLM
 
-![](images/stage1.png)
-![](images/stage2.png)
+![](../images/stage1.png)
+![](../images/stage2.png)
 
 ## Stage 1
 
 ### Data preparation and sampling
 
 - here we'll look at `tokenization`, given a sentence, how to break them down into individual `tokens`
-  ![](images/stage1_1.png)
+  ![](../images/stage1_1.png)
 - after `tokenization`, we'll look at `vector embeddings`, converting words into high dimensional vector space. so capture semantic meaning of each words in the sentence. and go into `positional encoding`
-  ![](images/vector_embedding.png)
+  ![](../images/vector_embedding.png)
 - after we'll look at how to `construct batches of the data`, with huge amount of dataset, how to convert them into batchs to the LLM which we'll build, `look at next word prediction task`.
 - implement data batching sequence
 
@@ -22,21 +22,21 @@
 
 ### Training loop
 
-![](images/training_loop.png)
+![](../images/training_loop.png)
 
 ### Model Evaluation + Load pretrained weight
 
-![](images/model_evaluation.png)
+![](../images/model_evaluation.png)
 
 ## Stage 3 - Finetuning
 
 ### Classifier
 
-![](images/finetuning_classifier.png)
+![](../images/finetuning_classifier.png)
 
 ### Personal assistant
 
-![](images/finetuning_assistant.png)
+![](../images/finetuning_assistant.png)
 
 #### recap of all we've learnt so far
 

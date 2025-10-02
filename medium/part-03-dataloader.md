@@ -43,7 +43,7 @@ To teach it this skill, we need to show it millions of examples. Each example co
 
 This is what we call an **input-target pair**.
 
-![Input-Target Pairs](../images/input_target_l9.png)
+![Input-Target Pairs](../../images/input_target_l9.png)
 
 Our goal is to create a pipeline that can automatically generate thousands of these pairs from our source text.
 
@@ -66,7 +66,7 @@ The **stride** is the number of tokens we slide the window forward to get our ne
 - If **stride = 1**, the next input chunk will overlap almost entirely with the previous one (e.g., `tokens[0:8]`, then `tokens[1:9]`, etc.). This creates a huge number of training examples but can be computationally intensive.
 - If **stride = context size**, there is no overlap. The chunks are sequential (e.g., `tokens[0:8]`, then `tokens[8:16]`, etc.). This is much faster and helps prevent the model from simply memorizing sequences.
 
-![Stride Visualization](../images/STRIDE_L9.png)
+![Stride Visualization](../../images/STRIDE_L9.png)
 
 ## Chapter 3: Building the Data Pipeline with PyTorch
 

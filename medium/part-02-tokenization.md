@@ -180,11 +180,11 @@ Imagine our dataset consists of these words with their frequencies:
 
 2.  **Iteration 1**: We find the most frequent consecutive pair of tokens. Let's say it's `e` and `s`. We merge them into a new token, `es`.
 
-    ![](../images/bpe_l8_frqt1.png)
+    ![](../../images/bpe_l8_frqt1.png)
 
 3.  **Iteration 2**: Now, the most frequent pair might be `es` and `t`. We merge them to form `est`.
 
-    ![](../images/bpe_l8_frqt2.png)
+    ![](../../images/bpe_l8_frqt2.png)
 
 4.  **And so on...**: We continue this process for a set number of merges. We might merge `est` with `</w>` to get `est</w>`, or `o` with `l` to get `ol`.
 

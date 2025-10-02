@@ -4,14 +4,14 @@
 
 ## SIMPLIFIED TRANSFORMER ARCHITECTURE
 
-![](images/transformer_archi.png)
+![](../images/transformer_archi.png)
 
 ### Steps
 
 1. **Input text**:The input text to be translated
 
 2. **Preprocessing steps**: Input text is the preprocessed, converted into tokens in a process called `tokenization`, img below for the the `encoder`.
-   ![](images/tokenization.png)
+   ![](../images/tokenization.png)
 
    - Tokenization is simply breaking down each words in the `input text` into their simplest form.
    - So in this step, the goal here is to prepare the text for the `encoder`
@@ -19,11 +19,11 @@
 3. **Encoder**: the `encoder` produces text that is used by the `decoder`
 
    - The encoder creates `vector embeddings`. **the goal is to capture or represent the semantic meaning between the words in the input text and then store them**. that is is the process of `vector embeddings`
-     ![](images/vector_embedding.png)
+     ![](../images/vector_embedding.png)
    - Again the main purpose of the `encoder` is to take in the `preprocessed text(tokens)` and then convert them to `vector embeddings` in `n-dimensional space` such that each word in the input makes sense in that dimensional space. as shown in the image above... such that words which are closer to each other are in the located around in the same vector space.
    - visualization of vector embedding(NB: embedding models are trained for this)
-     ![](images/embeddings.png)
-     ![](images/embeddings2.png)
+     ![](../images/embeddings.png)
+     ![](../images/embeddings2.png)
 
 4. **Embeddings**: `encoder` returns `embeddings vector` as input to the `decoder`
 
@@ -74,17 +74,17 @@
 
 - **BERT(Bidrectional Encoder Representation from Transformers)**: Predicts hidden words in a given sentence.
   - BERT uses only `encoders`
-    ![](images/bert.png)
+    ![](../images/bert.png)
 - **GPT(Generative Pretrained Transformers)**: Generate new words
   - On the the other hand, GPT uses only `decoders`
-    ![](images/gpt.png)
+    ![](../images/gpt.png)
 
 ## Transformers vs LLMs
 
 - Not all transformers are LLMs
 - Transformers can also be used for Computer Vision
-  ![vision transformers](images/vision_transformers.png)
+  ![vision transformers](../images/vision_transformers.png)
 
 - Not all LLMs are transformers
 - LLMs can be based on recurrent or convolutional architectures as well.
-  ![](images/trans_recurrent.png)
+  ![](../images/trans_recurrent.png)

@@ -11,7 +11,7 @@ For example, in both:
 The token `cat` would be mapped to the **same vector**, even though its position changes. <br>
 ⚠️ This lack of positional awareness limits the model’s understanding of **syntax** and **contextual flow**.
 
-![](images/L11_posi_enc.png)
+![](../images/L11_posi_enc.png)
 
 ### 📌 What is Positional Encoding?
 
@@ -34,7 +34,7 @@ It injects **positional information** into the token embeddings so the model can
 
 - Harder to generalize to sequences longer than seen during training.
 
-  ![](images/L11_abs_enc.png)
+  ![](../images/L11_abs_enc.png)
 
 ### 2. **Relative Positional Encoding**
 
@@ -68,7 +68,7 @@ Adding positional encoding allows the LLM to:
 
 We walk through how **token embeddings** and **positional embeddings** are combined to create **input embeddings** in a real model pipeline.
 
-## ![](images/L11_img1.png)
+## ![](../images/L11_img1.png)
 
 ### 📐 Setup Parameters
 
@@ -88,7 +88,7 @@ We walk through how **token embeddings** and **positional embeddings** are combi
 
 ### **1. Get Input from DataLoader**
 
-![](images/L11_img2.png)
+![](../images/L11_img2.png)
 Each training example gives:
 
 - A sequence of **4 token IDs** per sample (because `context_size = 4`)
@@ -98,7 +98,7 @@ Each token ID is mapped to a **token embedding vector of size 256**, so:
 
 - Token embeddings shape = `8 x 4 x 256` <br>
   (→ 8 samples, 4 tokens each, 256-dimensional vector per token)
-  ![](images/L11_img3.png)
+  ![](../images/L11_img3.png)
 
 🧠 _Think of this as a 3D tensor: `Batch x Sequence Length x Embedding Dim`_
 
@@ -114,7 +114,7 @@ Each token ID is mapped to a **token embedding vector of size 256**, so:
 
 Since all examples in the batch share the same 4 token positions, this matrix is **reused** across the batch.
 
-![](images/L11_img4.png)
+![](../images/L11_img4.png)
 
 ---
 

@@ -14,7 +14,7 @@
 - **Causal Attention**
 - **Multi-Head Attention** (used in GPT)
 
-![](images/L13_types_att.png)
+![](../images/L13_types_att.png)
 
 ---
 
@@ -40,9 +40,9 @@
 
 Before attention, sequence modeling (like translation) was handled using **RNN-based encoder-decoder** architectures:
 
-![](images/L13_s1.png)
+![](../images/L13_s1.png)
 
-> **Word-by-word translation fails.** > ![](images/L13_s2.png) > ![](images/L13_s3.png)
+> **Word-by-word translation fails.** > ![](../images/L13_s2.png) > ![](../images/L13_s3.png)
 
 Translation requires **contextual understanding** and **grammar alignment**.
 
@@ -50,8 +50,8 @@ To address this:
 
 - Use **Encoder** to process input
 - Use **Decoder** to generate output
-  ![](images/L13_s4.png)
-  📹 _[watch video](images/L13_enc_dec1.mp4)_
+  ![](../images/L13_s4.png)
+  📹 _[watch video](../images/L13_enc_dec1.mp4)_
 
 Under the hood:
 
@@ -62,7 +62,7 @@ Under the hood:
 
 ## 🧱 Encoder-Decoder with RNNs
 
-![](images/L13_s5.png)
+![](../images/L13_s5.png)
 
 ### Key Process:
 
@@ -95,7 +95,7 @@ Example:
 - In 2014, Bahdanau et al. proposed **soft attention** in RNNs
   ([paper](https://arxiv.org/abs/1409.0473))
 
-![](images/L13_s6.png)
+![](../images/L13_s6.png)
 
 ### Key Idea:
 
@@ -119,7 +119,7 @@ At each decoding step, the model can:
 
 This **dynamic focusing** allows for learning **long-range dependencies**.
 
-![](images/L13_s7.png)
+![](../images/L13_s7.png)
 
 > 💬 “The model isn’t blindly aligning word 1 to word 1—it learns the proper alignment during training.”
 
@@ -127,7 +127,7 @@ This **dynamic focusing** allows for learning **long-range dependencies**.
 
 ## 🧾 A Brief History of Attention
 
-![](images/L13_s7_his.png)
+![](../images/L13_s7_his.png)
 
 > 🔎 “Everyone talks about transformers now, but this line of research has evolved over **43+ years**.”
 
@@ -135,7 +135,7 @@ This **dynamic focusing** allows for learning **long-range dependencies**.
 
 ## 💥 Self-Attention = Core of LLMs
 
-![](images/L13_s8.png)
+![](../images/L13_s8.png)
 
 - **Self-Attention** allows each token to **attend to all other tokens** in the sequence.
 - Core to Transformer-based models like GPT.

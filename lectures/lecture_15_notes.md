@@ -3,7 +3,7 @@
 In this lecture, we will learn about the `self-attention mechanism` used in the original transformer, the GPT models and other popular LLMs
 
 This self attention mechanism also called `scaled dot-product attention`
-![](images/L15_s1.png)
+![](../images/L15_s1.png)
 
 **Objectives of this lecture**
 
@@ -12,7 +12,7 @@ This self attention mechanism also called `scaled dot-product attention`
 3. These trainable weights matrics are crucial so that the model can learn to produce `good` context vectors
 4. Implement the self-attention mechanism step by step by introducting 3 trainable weight: `Wq`, `Wk` and `Wv`
    - These 3 matrics are used to project the embedded input token `x(i)` into `query`, `key` and `value` vectors
-     ![](images/L15_s3.png)
+     ![](../images/L15_s3.png)
 
 > Just as a reminder, the context vector is taught of as the `enriched embeddings`, it not only contains information and semantic meaning about each token, but also contains information about how each and every embeddings relates to each other
 
@@ -20,7 +20,7 @@ This self attention mechanism also called `scaled dot-product attention`
 
 ### **Steps 1: Converting input embeddings into `query`, `key`, `value` vectors**
 
-![](images/L15_s2.png)
+![](../images/L15_s2.png)
 
 - so we first multiply the `input embeddings vectors` by a randomized vectors for the `query`, `key` and `value`. these are the trainable weights. so we'll have
   - `inputs * wq` -> `queries`
@@ -30,7 +30,7 @@ This self attention mechanism also called `scaled dot-product attention`
 
 ### **Steps 2: Computing attention scores**
 
-![](images/L15_s4.png)
+![](../images/L15_s4.png)
 
 ### **Steps 3: Computing attention weights**
 
@@ -40,16 +40,16 @@ This self attention mechanism also called `scaled dot-product attention`
 - this is the reason why it is called `scaled dot product attention` because the attention score are being scaled by dividing the attention scores with the square root of the dimension of the keys matrix
 - the scaling is done before applying softmax on the attention score to get the attention matrix
 
-![](images/L15_s5.png)
+![](../../images/L15_s5.png)
 
 ### **Steps 4: Computing context vector**
 
 - the context vector is computed by multiplying the attention weights withe values weights matrix. `context vector = attention weight * values`
 
-![](images/L15_s6.png)
-![context vector intuition](images/L15_s7.png)
+![](../../images/L15_s6.png)
+![context vector intuition](../../images/L15_s7.png)
 
-![overview of the self-attention process](images/L15_s8.png)
+![overview of the self-attention process](../../images/L15_s8.png)
 
 ### Analogy behind Query, Key, and Value in Self-Attention
 

@@ -41,7 +41,7 @@ Let's break down the name:
 
 The secret sauce that makes modern LLMs so powerful is an innovation called the **Transformer Architecture**, which we'll dive into shortly. It’s the engine that allows these models to handle language with unprecedented sophistication.
 
-![](../images/trans_recurrent.png)
+![](../../images/trans_recurrent.png)
 _Caption: While many modern LLMs are Transformers, the concept can also apply to older architectures like Recurrent Neural Networks (RNNs)._
 
 ---
@@ -79,7 +79,7 @@ The Transformer architecture, introduced in the 2017 paper "Attention Is All You
 
 A simplified view of the original architecture looks like this:
 
-![](../images/transformer_archi.png)
+![](../../images/transformer_archi.png)
 _Caption: The original Transformer architecture, consisting of an Encoder and a Decoder._
 
 The architecture has two main parts: an **Encoder** and a **Decoder**.
@@ -89,9 +89,9 @@ The architecture has two main parts: an **Encoder** and a **Decoder**.
 The Encoder's role is to read the input text and build a rich, contextual understanding of it. It does this by creating **vector embeddings**—numerical representations that capture the semantic meaning of words and their relationships to each other.
 
 - **Tokenization**: First, the input text is broken down into smaller pieces called tokens.
-  ![](../images/tokenization.png)
+  ![](../../images/tokenization.png)
 - **Vector Embedding**: Each token is then mapped to a high-dimensional vector. In this vector space, words with similar meanings are located closer to one another.
-  ![](../images/vector_embedding.png)
+  ![](../../images/vector_embedding.png)
 
 The primary goal of the encoder is to produce a set of embeddings that are rich with contextual information.
 
@@ -108,9 +108,9 @@ The true magic of the Transformer is the **self-attention mechanism**. This mech
 Later models adapted the original Transformer architecture:
 
 - **BERT (Bidirectional Encoder Representations from Transformers)** uses only the **Encoder** stack. It's designed to build a deep understanding of text, making it excellent for tasks like classification and question answering.
-  ![](../images/bert.png)
+  ![](../../images/bert.png)
 - **GPT (Generative Pre-trained Transformer)** uses only the **Decoder** stack. It's designed to generate text, making it perfect for tasks like text completion, summarization, and conversation.
-  ![](../images/gpt.png)
+  ![](../../images/gpt.png)
 
 For our series, since we are building a generative model, we will be focusing on the **GPT-style, decoder-only architecture**.
 
@@ -120,7 +120,7 @@ For our series, since we are building a generative model, we will be focusing on
 
 The GPT architecture is deceptively simple but incredibly powerful. It is trained on one of the most basic tasks imaginable: **next-word prediction**.
 
-![](../images/gpt_training.png)
+![](../../images/gpt_training.png)
 _Caption: GPT models are trained to predict the next word in a sequence._
 
 The model is given a sequence of text and its only job is to predict the next word. Because the "label" (the next word) is already in the text itself, this is a form of **self-supervised learning**.
@@ -129,7 +129,7 @@ This simple training objective, when applied at a massive scale, leads to **emer
 
 As mentioned, GPT is **autoregressive**, meaning it uses its own previous outputs as inputs for its future predictions. This feedback loop is what allows it to generate coherent, long-form text.
 
-![](../images/gpt_architecture2.png)
+![](../../images/gpt_architecture2.png)
 _Caption: The GPT architecture is a stack of decoder-only Transformer blocks._
 
 The final architecture is a stack of these decoder blocks—GPT-3, for instance, has 96 of them!
@@ -140,8 +140,8 @@ The final architecture is a stack of these decoder blocks—GPT-3, for instance,
 
 Now that we have the theory, let's lay out the roadmap for building our own LLM. We will follow a three-stage process.
 
-![](../images/stage1.png)
-![](../images/stage2.png)
+![](../../images/stage1.png)
+![](../../images/stage2.png)
 
 ### Stage 1: Data & Architecture (The Blueprint)
 
@@ -157,7 +157,7 @@ This is where our model learns about the world.
 - **The Training Loop**: We'll write the code to feed data to our model, calculate its errors, and update its parameters to improve its predictions.
 - **Evaluation**: We'll implement methods to evaluate our model's performance and save its trained weights for future use.
 
-![](../images/training_loop.png)
+![](../../images/training_loop.png)
 
 ### Stage 3: Fine-Tuning (Specialization)
 
@@ -165,7 +165,7 @@ Finally, we'll adapt our pretrained model for a specific task.
 
 - **Task-Specific Adaptation**: We'll take our general-purpose model and fine-tune it on a labeled dataset to create a specialized tool, like a text classifier or a simple assistant.
 
-![](../images/finetuning_classifier.png)
+![](../../images/finetuning_classifier.png)
 
 ---
 
