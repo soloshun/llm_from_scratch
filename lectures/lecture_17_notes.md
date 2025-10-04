@@ -3,7 +3,7 @@
 - There are 2 types of multi-head attention
 
   - concatenating the context vector matrix obtained from the different QKV matrix
-  - processing all in parallel with weight splits
+  - processing all in parallel with weight splits, [lecture 18, part 2](lecture_18_notes.md)
 
 - The term `multi-head` refers to dividing the attention mechanism into multiple heads(each operating independently)
 - **the main goal of any attention mechanism is to start from `input vectors` and convert them to into `context vectors`**
