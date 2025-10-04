@@ -1,5 +1,9 @@
 # A simplied self attention mechanism without trainable weights
 
+<!-- NOTE THIS IS VERY KEY POINT HERE -->
+
+> **the main goal of any attention mechanism is to start from `input vectors` and convert them to into `context vectors`**
+
 - The goal for attention is pick the `vector + positions embeddings` which captures the semantic meaning and others... and `outputs a context vector`
 - the `context vector` can be considered as an enriched `embedding vector` because it not only contains the semantic meaning but also contains information on how each word/token in the input sequence/sentence relate to each other. and this context helps model make the right prediction
   ![](../images/L14_atten.png)

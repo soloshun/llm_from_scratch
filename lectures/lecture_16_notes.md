@@ -14,6 +14,8 @@
 
 ---
 
+<!-- TODO:REMEMBER TO MAKE MENTION OF THE FACT THAT WE TALKED ABOUT AUTO REGRESSION IN THE VERY FIRST PART OF THE BUILD LLM FROM SCRATCH SERIES (PART 1) AND LINK THAT IDEA TO THIS CAUSAL ATTENTION -->
+
 ### 🧠 Why Causal Attention Exists
 
 Causal attention enforces the **autoregressive property** — that when the model predicts the next token at position t, it should **only use information from positions ≤ t** (past and present), and **not "peek" at future tokens** (> t).
