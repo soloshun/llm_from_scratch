@@ -14,4 +14,4 @@
 
 4. Input embeddings = Token ebeddings + postional embeddings
 
-![](../images/L12_preprocess.png)
+![image visusuliation for data preprocessing pipeline](../images/L12_preprocess.png)
