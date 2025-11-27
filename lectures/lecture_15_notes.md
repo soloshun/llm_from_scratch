@@ -40,16 +40,16 @@ This self attention mechanism also called `scaled dot-product attention`
 - this is the reason why it is called `scaled dot product attention` because the attention score are being scaled by dividing the attention scores with the square root of the dimension of the keys matrix
 - the scaling is done before applying softmax on the attention score to get the attention matrix
 
-![](../../images/L15_s5.png)
+![](../images/L15_s5.png)
 
 ### **Steps 4: Computing context vector**
 
 - the context vector is computed by multiplying the attention weights withe values weights matrix. `context vector = attention weight * values`
 
-![](../../images/L15_s6.png)
-![context vector intuition](../../images/L15_s7.png)
+![](../images/L15_s6.png)
+![context vector intuition](../images/L15_s7.png)
 
-![overview of the self-attention process](../../images/L15_s8.png)
+![overview of the self-attention process](../images/L15_s8.png)
 
 ### Analogy behind Query, Key, and Value in Self-Attention
 
