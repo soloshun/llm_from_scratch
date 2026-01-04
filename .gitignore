@@ -1,5 +1,6 @@
 # ignore all files in the llm-from-scratch directory
 llm-from-scratch/
+tokenizer.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
